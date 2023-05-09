@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>타이멍</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="index.js" defer></script>
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <h1 class="title a11y-hidden">위니브 타이머</h1>
+        <a href="#">
+          <img class="logo" src="./src/weniv-logo.svg" alt="위니브 로고" />
+        </a>
+      </header>
+      <main class="timer">
+        <h2 class="timer-title">TIMER</h2>
+        <section class="timer-display">
+          <h3 class="a11y-hidden">타이머</h3>
+          <div class="timebox">
+            <div>
+              <p class="hours">HRS</p>
+              <label for="hours"></label>
+              <input type="number" id="hours" min="0" max="99" value="00" />
+            </div>
+            <img src="src/icon/dot.svg" alt="구분점" />
+            <div>
+              <p class="minutes">MIN</p>
+              <label for="minutes"></label>
+              <input type="number" id="minutes" min="0" max="59" value="00" />
+            </div>
+            <img src="src/icon/dot.svg" alt="구분점" />
+            <div>
+              <p class="seconds">SEC</p>
+              <label for="seconds"></label>
+              <input type="number" id="seconds" min="0" max="59" value="00" />
+            </div>
+          </div>
+        </section>
+        <section class="timer-control">
+          <h3 class="a11y-hidden">타이머 조작</h3>
+          <button class="control-btn" id="startPause" type="button"></button>
+          <button class="control-btn" id="reset" type="button"></button>
+        </section>
+      </main>
+      <footer>ⓒ WENIV Corp.</footer>
+    </div>
+  </body>
+</html>

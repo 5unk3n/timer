@@ -1,0 +1,127 @@
+@font-face {
+  font-family: "Pretendard-Regular";
+  src: url("https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff")
+    format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+
+.a11y-hidden {
+  clip: rect(1px, 1px, 1px, 1px);
+  clip-path: inset(50%);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+}
+
+/* Resets ----------------- */
+:root {
+  font-size: 62.5%;
+}
+
+body,
+h1,
+h2,
+h3,
+p {
+  margin: initial;
+  padding: initial;
+}
+
+button,
+input {
+  color: inherit;
+  border: none;
+  padding: initial;
+  margin: initial;
+}
+
+/* Layouts ----------------- */
+.wrapper {
+  width: 400px;
+  margin: 0 auto;
+}
+
+header {
+  margin: 72px auto 60px;
+}
+
+.timer {
+  width: 400px;
+  height: 360px;
+  margin-bottom: 60px;
+  box-sizing: border-box;
+  padding: 48px 44px 40px;
+}
+
+.timebox {
+  display: flex;
+  padding: 0 14px;
+  margin: 57px 0 40px;
+}
+
+.timebox > div {
+  /* flex: 1 0 0; */
+}
+
+/* Styles ----------------- */
+body {
+  background: radial-gradient(
+      96.74% 276.79% at 3.59% 5.28%,
+      #f0f4ff 0%,
+      #a5b6ee 100%
+    )
+    fixed;
+  text-align: center;
+  color: #fff;
+}
+
+.logo {
+  width: 244px;
+  height: 48px;
+}
+
+.timer {
+  background: linear-gradient(144.07deg, #5572bb 2.13%, #374b7c 102.97%);
+  box-shadow: 20px 20px 60px 10px rgba(55, 75, 124, 0.4);
+  border-radius: 16px;
+}
+
+.timer-title {
+  font-size: 2.4rem;
+}
+
+.timer-title::after {
+  content: "";
+  display: block;
+  border: 1px solod #3d538a;
+  width: 312px;
+  height: 1px;
+}
+
+.timebox input {
+  width: 80px;
+  height: 80px;
+  background: linear-gradient(314.28deg, #304577 0%, #4c65a0 83%);
+  border: 1px solid #354971;
+  border-radius: 4px;
+  font-size: 4rem;
+  font-weight: 700;
+  text-align: center;
+}
+
+.control-btn {
+  width: 112px;
+  height: 48px;
+}
+
+#startPause {
+  background: url(src/button/start-default.svg);
+}
+
+#reset {
+  background: url(src/button/reset-default.svg);
+}
