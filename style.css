@@ -60,11 +60,11 @@ header {
 .timebox {
   display: flex;
   padding: 0 14px;
-  margin: 57px 0 40px;
+  margin-bottom: 40px;
 }
 
 .timebox > div {
-  /* flex: 1 0 0; */
+  flex-grow: 1;
 }
 
 /* Styles ----------------- */
@@ -97,9 +97,11 @@ body {
 .timer-title::after {
   content: "";
   display: block;
-  border: 1px solod #3d538a;
   width: 312px;
-  height: 1px;
+  background-color: #f0f4ff;
+  border-top: 1px solid #3d538a;
+  border-bottom: 1px solid #5b75b4;
+  margin: 20px 0 30px;
 }
 
 .timebox input {
@@ -113,6 +115,13 @@ body {
   text-align: center;
 }
 
+.timebox p {
+  font-size: 1.2rem;
+  color: #a5b6ee;
+  font-weight: 700;
+  margin-bottom: 4px;
+}
+
 .control-btn {
   width: 112px;
   height: 48px;
@@ -120,8 +129,13 @@ body {
 
 #startPause {
   background: url(src/button/start-default.svg);
+  margin-right: 12px;
 }
 
 #reset {
   background: url(src/button/reset-default.svg);
+}
+
+footer {
+  color: #8596bf;
 }

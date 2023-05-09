@@ -4,7 +4,6 @@ const $secondsInput = document.querySelector("#seconds");
 const $startPauseBtn = document.querySelector("#startPause");
 const $resetBtn = document.querySelector("#reset");
 
-// let [hours, minutes, seconds] = [0, 0, 0];
 let timerState = false;
 
 function startPauseTimer() {
@@ -19,6 +18,7 @@ function startPauseTimer() {
   }
 }
 
+// TODO: 한자리 수 두자리료 표시하기
 function decrementSeconds() {
   if ($secondsInput.value > 0) {
     $secondsInput.value -= 1;
@@ -35,6 +35,7 @@ function decrementSeconds() {
     $hoursInput.value = 0;
     clearInterval(timer);
     timerState = false;
+    $startPauseBtn.style.backgroundImage = "url(src/button/start-default.svg)";
     alert("끝~");
   }
 }
@@ -43,6 +44,7 @@ function reset() {
   $hoursInput.value = 0;
   $minutesInput.value = 0;
   $secondsInput.value = 0;
+  $startPauseBtn.style.backgroundImage = "url(src/button/start-default.svg)";
   clearInterval(timer);
 }
 
@@ -51,7 +53,7 @@ function inputValidHandler() {
     if (this === $hoursInput) {
       this.value = this.value.slice(0, 2);
     } else {
-      this.value = 60;
+      this.value = 59;
     }
   }
 }
